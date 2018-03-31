@@ -5,7 +5,7 @@ $(document).ready(function(){
 
     if ($('#form3').val() != "") {
       let valor = $('#form3').val();
-      $('#credits, #fijo, #percent, #balance, #total, #percentage, #noValid, #incomplete').empty();
+      $('#credits, #fijo, #percent, #balance, #total, #percentage, #noValid, #incomplete, #totalDiscount').empty();
       $('#form3').val("");
       let percentOne = parseInt(valor*0.05);
       let percentTwo = parseInt(valor*0.1);
@@ -27,6 +27,7 @@ $(document).ready(function(){
       }
       //condiciones para rango de renta
       if (valor < 450000 ) {
+        $('#totalDiscount').empty();
         $('#credits').empty();
         $('#fijo').empty();
         $('#total').empty();
@@ -59,6 +60,7 @@ $(document).ready(function(){
       }
     }
     else {
+      $('#totalDiscount').empty();
       $('.incomplete').empty();
       $('.noValid').empty();
       $('#credits').empty();
