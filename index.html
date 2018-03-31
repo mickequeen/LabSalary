@@ -5,15 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Lab-Calc</title>
-  <!-- Font Awesome -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Bootstrap core CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
 <link href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled.min.css?ver=4.5.0" rel="stylesheet">
 <link rel="stylesheet" href="src/css/main.css">
 </head>
-<body>
+<body id="body">
 
 <!-- Main navigation -->
 <header>
@@ -46,7 +44,7 @@
                 </div>
                 <!--Body-->
                 <div class="md-form">
-                  <i class="fa fa-money prefix white-text active"></i>
+                  <i class="fas fa-money-bill-alt prefix white-text active"></i>
                   <input type="number" id="form3" class="white-text form-control">
                   <label for="form3" class="active">Sueldo Líquido</label>
                 </div>
@@ -101,6 +99,7 @@
       <div class="modal-content">
         <!--Header-->
         <div class="modal-header">
+          <h1 class="white-text" id="error"></h1>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true" class="white-text">&times;</span>
           </button>
@@ -114,20 +113,24 @@
                 <td id="credits"></td>
               </tr>
               <tr>
-                <td>Cuota fija (según creditos)</td>
+                <td><i class="fas fa-percent"></i> Según rango sueldo</td>
+                <td id="percentage"></td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-hand-holding-usd"></i> Cuota fija (según creditos)</td>
                 <td id="fijo"></td>
               </tr>
               <tr>
-                <td>Product 2</td>
-                <td>100$</td>
+                <td><i class="fas fa-dollar-sign"></i> Valor porcentaje (rango)</td>
+                <td id="percent"></td>
               </tr>
               <tr>
-                <td>Product 3</td>
-                <td>100$</td>
+                <td><i class="fas fa-female"></i> Saldo para TI</td>
+                <td id="balance"></td>
               </tr>
               <tr class="total">
-                <td>Total</td>
-                <td>400$</td>
+                <td>Total (líquido ingresado)</td>
+                <td id="total"></td>
                 <td></td>
               </tr>
             </tbody>
@@ -146,6 +149,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
   <script src="src/js/app.js"></script>
 </body>
 </html>
