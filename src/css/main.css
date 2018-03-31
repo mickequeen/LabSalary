@@ -45,7 +45,13 @@ header,
 .bold{
   font-weight: 600;
 }
+.warning-text{
+  color:#FFC107;
+}
 
+.success-text{
+  color: darkgreen;
+}
 h6 {
   line-height: 1.7;
 }
