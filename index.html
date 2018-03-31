@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lab-Calc</title>
+  <!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled.min.css?ver=4.5.0" rel="stylesheet">
+<link rel="stylesheet" href="src/css/main.css">
+</head>
+<body>
+
+<!-- Main navigation -->
+<header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <strong>Salary Calc</strong>
+      </a>
+    </div>
+  </nav>
+  <!-- Navbar -->
+  <!-- Full Page Intro -->
+  <div class="view" style="background-image: url('http://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+      <!-- Content -->
+      <div class="container">
+        <!--Grid row-->
+        <div class="row mt-5">
+          <div class="col-md-6 col-xl-5 mb-4 mx-auto">
+            <!--Form-->
+            <div class="card wow" data-wow-delay="0.3s">
+              <div class="card-body">
+                <!--Header-->
+                <div class="text-center">
+                  <h3 class="white-text">
+                    <i class="fa fa-code white-text"></i> Do the math:</h3>
+                  <hr class="hr-light">
+                </div>
+                <!--Body-->
+                <div class="md-form">
+                  <i class="fa fa-money prefix white-text active"></i>
+                  <input type="number" id="form3" class="white-text form-control">
+                  <label for="form3" class="active">Sueldo Líquido</label>
+                </div>
+                <!-- Form inline with radios -->
+                <form class="form-inline white-text">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="200Credits" value="option1" checked>
+                    <label class="form-check-label" for="200Credits">
+                      200 Cred.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="100Credits" value="option2">
+                    <label class="form-check-label" for="100Credits">
+                      100 Cred.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="0Credits" value="option3">
+                    <label class="form-check-label" for="0Credits">
+                      0 Cred.
+                    </label>
+                  </div>
+                
+                </form> 
+<!-- Form inline with radios -->
+                <div class="text-center mt-4">
+                  <button class="btn btn-indigo" id="calculate" data-toggle="modal" data-target="#centralModalInfo">Calcular</button>
+                  <h6 class="grey-text">developed by @mickequeen</h6>
+                </div>
+              </div>
+            </div>
+            <!--/.Form-->
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Content -->
+    </div>
+    <!-- Mask & flexbox options-->
+  </div>
+  <!-- Full Page Intro -->
+</header>
+<!-- Main navigation -->
+
+  
+  <!-- Central Modal Medium Info -->
+  <div class="modal fade" id="centralModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+          <table class="table table-hover">
+            <tbody>
+              <tr>
+                <td>Créditos seleccionados</td>
+                <td id="credits"></td>
+              </tr>
+              <tr>
+                <td>Cuota fija (según creditos)</td>
+                <td id="fijo"></td>
+              </tr>
+              <tr>
+                <td>Product 2</td>
+                <td>100$</td>
+              </tr>
+              <tr>
+                <td>Product 3</td>
+                <td>100$</td>
+              </tr>
+              <tr class="total">
+                <td>Total</td>
+                <td>400$</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+  <!-- Central Modal Medium Info-->
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+  <script src="src/js/app.js"></script>
+</body>
+</html>
