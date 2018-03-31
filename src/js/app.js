@@ -33,7 +33,7 @@ $(document).ready(function(){
         $("#balance").empty();
         $('#percentage').empty();
         $('#percent').empty();
-        $('.modal-body').append(`<div class="text-center" id="noValid"><span class="badge red">Sueldo NO válido según tabla empleabilidad</span><br><span class="badge red"> < a $450.000 </span></div>`)
+        $('.modal-body').append(`<div class="text-center noValid" id="noValid"><span class="badge red">Sueldo NO válido según tabla empleabilidad</span><br><span class="badge red"> < a $450.000 </span></div>`)
       }
       if (valor >= 450000 && valor <= 530000 ) {
         $("#balance").append('$' + (valor-cuotaFija));
@@ -55,14 +55,15 @@ $(document).ready(function(){
       }
     }
     else {
-      $('#noValid').empty();
+      $('.incomplete').empty();
+      $('.noValid').empty();
       $('#credits').empty();
       $('#fijo').empty();
       $('#total').empty();
       $("#balance").empty();
       $('#percentage').empty();
       $('#percent').empty();  
-    $('.modal-body').append(`<div class="text-center" id="incomplete"><span class="badge red">Favor complete todos los campos</span></div>`)
+    $('.modal-body').append(`<div class="text-center incomplete" id="incomplete"><span class="badge red">Favor complete todos los campos</span></div>`)
     }
   })
 
