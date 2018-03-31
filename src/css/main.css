@@ -42,6 +42,10 @@ header,
   color: #ffffff;
 }
 
+.bold{
+  font-weight: 600;
+}
+
 h6 {
   line-height: 1.7;
 }

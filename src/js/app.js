@@ -10,7 +10,7 @@ $(document).ready(function(){
       let percentOne = parseInt(valor*0.05);
       let percentTwo = parseInt(valor*0.1);
       let percentThree = parseInt(valor*0.15);
-      $('#total').append(valor);
+      $('#total').append('$' + valor);
       //condiciones para valores de los créditos
       if ($('#200Credits').prop('checked')) {
         $('#credits').append('200');
@@ -38,18 +38,22 @@ $(document).ready(function(){
       if (valor >= 450000 && valor <= 530000 ) {
         $("#balance").append('$' + (valor-cuotaFija));
         $('#percentage').append('0%');
-        $('#percent').append('Tramo sin % de Dcto')
+        $('#percent').append('Tramo sin % de Dcto');
+        $('#totalDiscount').append('$' + (cuotaFija));
       } if ( valor >= 530001 && valor <= 710000) {
         $("#balance").append('$' + (valor-(cuotaFija+percentOne)));
         $('#percent').append('$' + percentOne);
+        $('#totalDiscount').append('$' + (cuotaFija+percentOne));
         $('#percentage').append('5%');
       } if ( valor >= 710001 && valor <= 1080000 ) {
         $("#balance").append('$' + (valor-(cuotaFija+percentTwo)));
+        $('#totalDiscount').append('$' + (cuotaFija+percentTwo));
         $('#percentage').append('10%');
         $('#percent').append('$' + percentTwo)
       }
       if ( valor > 1080000 ) {
         $("#balance").append('$' + (valor - (cuotaFija + percentThree)));
+        $('#totalDiscount').append('$' + (cuotaFija+percentThree));
         $('#percentage').append('15%');
         $('#percent').append('$' + percentThree)
       }
